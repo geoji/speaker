@@ -5,8 +5,7 @@ import org.eclipse.jetty.servlet.ServletHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
 /**
- * Hello world!
- *
+ * Main class for the application
  */
 public class App 
 {
