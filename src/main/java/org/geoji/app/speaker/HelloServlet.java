@@ -30,6 +30,8 @@ public class HelloServlet extends HttpServlet{
 
     public void init(ServletConfig config) {
         this.helloService = new HelloService();
+        
+        // Make the methods of HelloService available via json-rpc
         this.jsonRpcServer = new JsonRpcServer(new ObjectMapper(), this.helloService, HelloService.class);
     }
 }
