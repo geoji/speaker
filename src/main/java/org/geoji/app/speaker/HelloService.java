@@ -26,4 +26,15 @@ public class HelloService {
 	public String greeting(String firstName, String lastName) {
 		return "Hello " + firstName + " " + lastName; 
 	}
+	
+	/**
+	 * Subtracts <code>secondNumber</code> from <code>firstNumber</code> and returns
+	 * the result
+	 * @param firstNumber
+	 * @param secondNumber
+	 * @return the result of subtraction (firstNumber - secondNumber)
+	 */
+	public double subtract(double firstNumber, double secondNumber) {
+		return firstNumber - secondNumber; 
+	}
 }
