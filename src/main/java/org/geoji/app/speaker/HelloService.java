@@ -15,6 +15,8 @@
  */
 package org.geoji.app.speaker;
 
+import com.googlecode.jsonrpc4j.JsonRpcParam;
+
 public class HelloService {
 	
 	/**
@@ -23,7 +25,7 @@ public class HelloService {
 	 * @param lastName the last name of the person
 	 * @return the greeting
 	 */
-	public String greeting(String firstName, String lastName) {
+	public String greeting(@JsonRpcParam(value="firstName") String firstName, @JsonRpcParam(value="lastName") String lastName) {
 		return "Hello " + firstName + " " + lastName; 
 	}
 	
@@ -34,7 +36,7 @@ public class HelloService {
 	 * @param secondNumber
 	 * @return the result of subtraction (firstNumber - secondNumber)
 	 */
-	public double subtract(double firstNumber, double secondNumber) {
+	public double subtract(@JsonRpcParam(value="firstNumber") double firstNumber, @JsonRpcParam(value="secondNumber") double secondNumber) {
 		return firstNumber - secondNumber; 
 	}
 }
